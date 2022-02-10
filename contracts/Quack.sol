@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity >=0.7.0 <0.9.0;
 
-import "./QuackBehavior.sol";
+import "./IQuackBehavior.sol";
 
-contract Quack is QuackBehavior{
+contract Quack is IQuackBehavior{
     function quack() external override {
         emit LogQuack("quack");
     }

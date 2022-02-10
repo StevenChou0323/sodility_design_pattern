@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity >=0.7.0 <0.9.0;
 
-import "./QuackBehavior.sol";
-import "./FlyBehavior.sol";
+import "./IQuackBehavior.sol";
+import "./IFlyBehavior.sol";
 
 contract Duck{
-    QuackBehavior quackBehavior;
-    FlyBehavior flyBehavior;
+    IQuackBehavior quackBehavior;
+    IFlyBehavior flyBehavior;
 
     function performQuack() external {
         quackBehavior.quack();
@@ -16,11 +16,11 @@ contract Duck{
         flyBehavior.fly();
     }
 
-    function setQuackBehavior(QuackBehavior qb) external{
+    function setQuackBehavior(IQuackBehavior qb) external{
         quackBehavior = qb;
     }
 
-    function setFlyBehavior(FlyBehavior fb) external{
+    function setFlyBehavior(IFlyBehavior fb) external{
         flyBehavior = fb;
     }
 }
